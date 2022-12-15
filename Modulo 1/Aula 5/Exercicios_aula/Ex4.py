@@ -30,7 +30,8 @@ def pascal(row, column):
 
 def print_pascal(n): 
 
-    for i in range(n): 
+    for i in range(n):
+        print(" "*(n-i),end="") 
         for j in range(i + 1): 
             print(pascal(i,j),end=" ")
         print()
