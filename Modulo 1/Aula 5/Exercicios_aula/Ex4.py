@@ -15,3 +15,25 @@ def triangulo_pascal(num):
 
 numero_linhas = 5
 triangulo_pascal(numero_linhas)
+
+
+# resolução do professor. 
+
+def pascal(row, column): 
+    if row == 0 and column == 0:
+        return 1
+    elif row < 0 or column < 0: 
+        return 0
+    else: 
+        return pascal(row -1, column) + pascal(row-1, column-1)
+
+
+def print_pascal(n): 
+
+    for i in range(n): 
+        for j in range(i + 1): 
+            print(pascal(i,j),end=" ")
+        print()
+
+
+print_pascal(5)
